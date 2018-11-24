@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='external.css') }}" />
+    <title>40272321</title>
+</head>
+
+    <body>
+        <div id="navbar">
+        <ul id="navUL">
+            <li id="navLi"><a id="navButton"  href="{{ url_for('index') }}">Home</a>
+            <li id="navLi"><a id="navButton"  href="{{ url_for('servants') }}">Servants</a>
+            <li id="navLi"><a id="navButton"  href="{{ url_for('MysticCodes') }}">Mystic Codes</a>
+            <li id="navLi"><a id="navButton"  href="{{ url_for('send') }}">Add New</a>
+        </ul>
+        {% block content %} {% endblock %}
+    </body>
+</html>

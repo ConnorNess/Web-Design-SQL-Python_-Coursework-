@@ -1,0 +1,33 @@
+{% extends 'index.html' %}
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='external.css') }}" />
+<div id="desc">
+<table class="newservant">
+    <td><label>Enter Servant Name</label></td>
+    <form method="POST" action="/send">
+        <td><input type="text" name="servantName"></td>
+  <tr>
+    <td><label>Servant Class</label></td>
+        <td><input type="text" name="servantClass"></td>
+  <tr>
+    <td><label>Nobel Phantasm</label></td>
+        <td><input type="text" name="servantNP"></td>
+  <tr>
+    <td><label>Rarity</label></td>
+        <td><input type="text" name="servantRarity"></td>
+  <tr>
+    <td><label>Skill 1</label></td>
+        <td><input type="text" name="servantS1"></td>
+  <tr>
+    <td><label>Skill 2</label></td>
+        <td><input type="text" name="servantS2"></td>
+  <tr>
+    <td><label>Skill 3</label></td>
+        <td><input type="text" name="servantS3"></td>
+  <tr>
+    <td><label>Servant Description</label></td>
+        <td><input type="text" name="servantDesc"></td>
+</table>
+<input class="btn" type="submit" value="submit">
+
+    {% endblock %}

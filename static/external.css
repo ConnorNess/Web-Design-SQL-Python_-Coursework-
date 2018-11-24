@@ -1,0 +1,130 @@
+html{
+    height: 100%;
+    font: Sans-Serif;
+}
+body{height: 100%;
+    margin:0;
+    background:#f9f9f9;
+    font: Sans-Serif;
+}
+h1
+{
+    margin: auto;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom:15px;
+}
+h2
+{
+    margin: auto;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom:15px;
+}
+table{
+  margin-left:auto;
+  margin-right:auto;
+}
+
+#contentlist{
+  height: 30px;
+  padding: 20px;
+  border: 1px #f9f9f9;
+}
+#newservant{
+  padding: 20px;
+  border: 1px #f9f9f9;
+}
+#desc
+{
+    text-align: center;
+    font-size: 14pt;
+    font: Sans-Serif;
+}
+#navbar
+{
+    font: Sans-Serif;
+    font-size: 12pt;
+    display:block;
+    text-align: left;
+    width: 99.5%;
+    height: 8%;
+}
+
+
+#navUL
+{
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #8ccbcf;
+}
+
+#navLi
+{
+    float: left;
+}
+
+#navButton {
+    display: block;
+    color: black;
+    font-size: 14pt;
+    padding: 27px 20px;
+    text-decoration: none;
+}
+
+#navButton:hover{
+    background-color: #00818b;
+}
+
+#newPost{
+    font: Sans-Serif;
+    font-size: 18pt;
+    margin: auto;
+    width: 10%;
+    padding: 10px;
+    background-color: #f0efff;
+    border-radius:5px;
+}
+
+#buttons button
+{
+    background-color: #565655;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+input[type=text]
+{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 12px 0;
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    border-radius:5px;
+}
+
+input[type=submit]
+{
+    width: 25%;
+    background-color: #e56928;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+label{
+    margin-left:auto;
+    margin-right:auto;
+    padding-bottom: 5px;
+}
