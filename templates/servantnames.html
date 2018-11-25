@@ -1,8 +1,8 @@
 {% extends 'index.html' %}
 {% block content %}
     <link rel="stylesheet" href="{{ url_for('static', filename='external.css') }}" />
-    <div id="desc">
-    <table class="contentlist">
+    <div id="contentlist">
+    <table>
         {% for name in names %}
         <tr><td><a href="{{ url_for('servant_name', servantname=name) }}">{{ name }}</a></td></tr>
         {%endfor%}

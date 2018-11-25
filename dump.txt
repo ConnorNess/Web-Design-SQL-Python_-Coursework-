@@ -1,0 +1,84 @@
+
+@app.route('/servants/S1s')
+def S1s():
+    S1s = set()
+    db = get_db()
+    sql = "SELECT S1 FROM servants"
+    for row in db.cursor().execute(sql):
+        S1s.add(row[0])
+
+    return render_template("S1list.html", names=S1s)
+
+@app.route('/servants/S1s/<S1>')
+def S1list(S1):
+    servants = []
+    db = get_db()
+    sql = "SELECT name FROM servants WHERE S1=:S1"
+    result = db.cursor().execute(sql, {"S1": S1 })
+    for row in result:
+        servants.append(row[0])
+
+    return render_template("servantnames.html", names=servants)
+
+@app.route('/servants/S2')
+def S2():
+    S2s = set()
+    db = get_db()
+    sql = "SELECT S2 FROM servants"
+    for row in db.cursor().execute(sql):
+        S2.add(row[0])
+
+    return render_template("S2List.html", names=S2s)
+
+@app.route('/servants/S2/<S2>')
+def S2list(S2):
+    servants = []
+    db = get_db()
+    sql = "SELECT name FROM servants WHERE S2=:S2"
+    result = db.cursor().execute(sql, {"S2": S2 })
+    for row in result:
+        servants.append(row[0])
+
+    return render_template("servantnames.html", names=servants)
+
+@app.route('/servants/S3s')
+def S3s():
+    S3 = set()
+    db = get_db()
+    sql = "SELECT S3 FROM servants"
+    for row in db.cursor().execute(sql):
+        S3.add(row[0])
+
+    return render_template("S3List.html", names=S3s)
+
+@app.route('/servants/S3s/<S3>')
+def S3list(S3):
+    servants = []
+    db = get_db()
+    sql = "SELECT name FROM servants WHERE S3=:S3"
+    result = db.cursor().execute(sql, {"S3": S3 })
+    for row in result:
+        servants.append(row[0])
+
+    return render_template("servantnames.html", names=servants)
+
+@app.route('/servants/sclasss')
+def sclasss():
+    sclass = set()
+    db = get_db()
+    sql = "SELECT sclass FROM servants"
+    for row in db.cursor().execute(sql):
+        sclass.add(row[0])
+
+    return render_template("sclassList.html", names=sclass)
+
+@app.route('/servants/sclasss/<sclass>')
+def sclasslist(sclass):
+    servants = []
+    db = get_db()
+    sql = "SELECT name FROM servants WHERE sclass=:sclass"
+    result = db.cursor().execute(sql, {"sclass": sclass })
+    for row in result:
+        servants.append(row[0])
+
+    return render_template("servantnames.html", names=servants)

@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
     <link rel="stylesheet" href="{{ url_for('static', filename='external.css') }}" />
@@ -10,8 +10,11 @@
         <ul id="navUL">
             <li id="navLi"><a id="navButton"  href="{{ url_for('index') }}">Home</a>
             <li id="navLi"><a id="navButton"  href="{{ url_for('servants') }}">Servants</a>
+            <li id="navLi"><a id="navButton"  href="{{ url_for('CraftEssences') }}">Craft Essences</a>
             <li id="navLi"><a id="navButton"  href="{{ url_for('MysticCodes') }}">Mystic Codes</a>
-            <li id="navLi"><a id="navButton"  href="{{ url_for('send') }}">Add New</a>
+            <li id="navLi"><a id="navButton"  href="{{ url_for('send') }}">Add New Servant</a>
+            <li id="navLi"><a id="navButton"  href="{{ url_for('sendCE') }}">Add New Craft Essence</a>
+            <li id="navLi"><a id="navButton"  href="{{ url_for('party') }}">Create Party</a>
         </ul>
         {% block content %} {% endblock %}
     </body>

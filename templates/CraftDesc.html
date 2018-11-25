@@ -3,8 +3,10 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='external.css') }}" />
     <div id="desc">
     <ul>
-        <h2>{{ MysticCode.mname }} </h2>
-        <p> {{ MysticCode.desc }} </p>
+        <h2>{{ CraftEssence.cname }} </h2>
+        <p>Cost - {{ CraftEssence.ccost }} </p>
+        <p>Rarity - &#9733;{{ CraftEssence.crarity }} </p>
+        <p> {{ CraftEssence.desc }} </p>
     </ul>
 </div>
     {% endblock %}

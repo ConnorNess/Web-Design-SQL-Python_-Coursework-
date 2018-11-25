@@ -3,30 +3,43 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='external.css') }}" />
 <div id="desc">
 <table class="newservant">
+  <tr>
     <td><label>Enter Servant Name</label></td>
     <form method="POST" action="/send">
-        <td><input type="text" name="servantName"></td>
+        <td><input type="text" name="servantname"></td>
+  </tr>
   <tr>
     <td><label>Servant Class</label></td>
-        <td><input type="text" name="servantClass"></td>
+        <td><input type="text" name="sclass"></td>
+  </tr>
   <tr>
-    <td><label>Nobel Phantasm</label></td>
-        <td><input type="text" name="servantNP"></td>
+    <td><label>Noble Phantasm</label></td>
+        <td><input type="text" name="NP"></td>
+  </tr>
+  <tr>
+    <td><label>Cost</label></td>
+        <td><input type="number" name="scost"></td>
+  </tr>
   <tr>
     <td><label>Rarity</label></td>
-        <td><input type="text" name="servantRarity"></td>
+        <td><input type="number" name="Rarity"></td>
+  </tr>
   <tr>
     <td><label>Skill 1</label></td>
-        <td><input type="text" name="servantS1"></td>
+        <td><input type="text" name="S1"></td>
+  </tr>
   <tr>
     <td><label>Skill 2</label></td>
-        <td><input type="text" name="servantS2"></td>
+        <td><input type="text" name="S2"></td>
+  </tr>
   <tr>
     <td><label>Skill 3</label></td>
-        <td><input type="text" name="servantS3"></td>
+        <td><input type="text" name="S3"></td>
+  </tr>
   <tr>
     <td><label>Servant Description</label></td>
-        <td><input type="text" name="servantDesc"></td>
+        <td><input type="text" name="desc"></td>
+  </tr>
 </table>
 <input class="btn" type="submit" value="submit">
 

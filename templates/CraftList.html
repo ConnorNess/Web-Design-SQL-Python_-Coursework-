@@ -3,8 +3,8 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='external.css') }}" />
     <div id="contentlist">
     <table>
-        {% for mname in mnames %}
-        <tr><td><a href="{{ url_for('MysticCodename', MysticCodename=mname) }}">{{ mname }}</a></td></tr>
+        {% for cname in cnames %}
+        <tr><td><a href="{{ url_for('CraftEssencename', CraftEssencename=cname) }}">{{ cname }}</a></td></tr>
         {%endfor%}
     </table>
 </div>

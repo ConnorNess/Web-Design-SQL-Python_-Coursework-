@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='external.css') }}" />
+<div id="desc">
+<table class="newservant">
+  <tr>
+    <td><label>Enter Craft Essence Name</label></td>
+    <form method="POST" action="/sendCE">
+        <td><input type="text" name="craftname"></td>
+  </tr>
+  <tr>
+    <td><label>Cost</label></td>
+        <td><input type="number" name="ccost"></td>
+  </tr>
+  <tr>
+    <td><label>Rarity</label></td>
+        <td><input type="number" name="crarity"></td>
+  </tr>
+  <tr>
+    <td><label>Craft Essence Description</label></td>
+        <td><input type="text" name="cdesc"></td>
+  </tr>
+</table>
+<input class="btn" type="submit" value="submit">
+
+    {% endblock %}
