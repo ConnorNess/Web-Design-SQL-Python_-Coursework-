@@ -3,85 +3,53 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='external.css') }}" />
     <br><br><br><br><br>
     <div id="contentlist">
+      <form method="POST" action="/party">
       <table>
         <tr>
+          <td> Servants </td>
           <td>
-            <select id ="servant1">
-              {% for name in names %}
-              <option value="{{ url_for('servant_name', servantname=name) }}">{{ name }}</option>
-              {%endfor%}
-            </select>
+            <input type="text" name ="servant1">
             <br>
           </td>
           <td>
-            <select id ="servant2">
-              {% for name in names %}
-              <option value="{{ url_for('servant_name', servantname=name) }}">{{ name }}</option>
-              {%endfor%}
-            </select>
+            <input type="text" name ="servant2">
           </td>
           <td>
-            <select id ="servant3">
-              {% for name in names %}
-              <option value="{{ url_for('servant_name', servantname=name) }}">{{ name }}</option>
-              {%endfor%}
-            </select>
+            <input type="text" name ="servant3">
           </td>
           <td>
-            <select id ="servant4">
-              {% for name in names %}
-              <option value="{{ url_for('servant_name', servantname=name) }}">{{ name }}</option>
-              {%endfor%}
-            </select>
+            <input type="text" name ="servant4">
           </td>
           <td>
-            <select id ="servant5">
-              {% for name in names %}
-              <option value="{{ url_for('servant_name', servantname=name) }}">{{ name }}</option>
-              {%endfor%}
-            </select>
+            <input type="text" name ="servant5">
           </td>
           </tr>
 
           <tr>
+          <td> CEs </td>
           <td>
-            <select id ="craft1">
-              {% for cname in cnames %}
-              <option value="{{ url_for('CraftEssencename', CraftEssencename=cname) }}">{{ cname }}</option>
-              {%endfor%}
-            </select>
+            <input type="text" name ="craft1">
           </td>
           <td>
-            <select id ="craft2">
-              {% for cname in cnames %}
-              <option value="{{ url_for('CraftEssencename', CraftEssencename=cname) }}">{{ cname }}</option>
-              {%endfor%}
-            </select>
+            <input type="text" name ="craft2">
           </td>
           <td>
-            <select id ="craft3">
-              {% for cname in cnames %}
-              <option value="{{ url_for('CraftEssencename', CraftEssencename=cname) }}">{{ cname }}</option>
-              {%endfor%}
-            </select>
+            <input type="text" name ="craft3">
           </td>
           <td>
-            <select id ="craft4">
-              {% for cname in cnames %}
-              <option value="{{ url_for('CraftEssencename', CraftEssencename=cname) }}">{{ cname }}</option>
-              {%endfor%}
-            </select>
+            <input type="text" name ="craft4">
           </td>
           <td>
-            <select id ="craft5">
-              {% for cname in cnames %}
-              <option value="{{ url_for('CraftEssencename', CraftEssencename=cname) }}">{{ cname }}</option>
-              {%endfor%}
-            </select>
+            <input type="text" name ="craft5">
           </td>
           </tr>
         </table>
       <br><br>
-    <input class="btn" type="submit" value="Calculate Cost">
+    <div><center>
+      <input class="button" type="submit" value="Calculate Cost">
+    </center></div>
+    </form>
+    <br>
+    <h2> Total cost = {{ totalcost }} </h2>
 </div>
 {% endblock %}

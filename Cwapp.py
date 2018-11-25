@@ -105,17 +105,50 @@ def CraftEssencename(CraftEssencename):
 
     return render_template('CraftDesc.html', CraftEssence=thisCraftEssence)
 
-@app.route('/party')
+@app.route('/party', methods=['GET', 'POST'])
 def party():
     partyservants = []
     partyCE = []
     db = get_db()
-    sql = "SELECT name FROM servants"
-    csql = "SELECT cname FROM CraftEssences"
+    sql = "SELECT name, scost FROM servants"
+    csql = "SELECT cname, ccost FROM CraftEssences"
     for row in db.cursor().execute(sql):
         partyservants.append(row[0])
     for row in db.cursor().execute(csql):
         partyCE.append(row[0])
+
+    if request.method=='POST':
+        selectedservants = []
+        selectedcrafts = []
+        totalcost = 0
+
+        selectedservants.append(request.form['servant1'])
+        selectedservants.append(request.form['servant2'])
+        selectedservants.append(request.form['servant3'])
+        selectedservants.append(request.form['servant4'])
+        selectedservants.append(request.form['servant5'])
+
+        selectedcrafts.append(request.form['craft1'])
+        selectedcrafts.append(request.form['craft2'])
+        selectedcrafts.append(request.form['craft3'])
+        selectedcrafts.append(request.form['craft4'])
+        selectedcrafts.append(request.form['craft5'])
+
+        #print(selectedservants, selectedcrafts)
+
+        for names in selectedservants:
+            servsql = "SELECT scost FROM servants WHERE name=:name"
+            result = db.cursor().execute(servsql, {"name":names}).fetchone()
+            totalcost += result[0]
+            print(totalcost)
+
+        for names in selectedcrafts:
+            servsql = "SELECT ccost FROM CraftEssences WHERE cname=:name"
+            result = db.cursor().execute(servsql, {"name":names}).fetchone()
+            totalcost += result[0]
+            print(totalcost)
+
+        return render_template('party.html', names=partyservants, cnames=partyCE, totalcost=totalcost)
 
     return render_template('party.html', names=partyservants, cnames=partyCE)
 
